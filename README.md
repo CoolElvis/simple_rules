@@ -1,9 +1,5 @@
 # SimpleRules
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/simple_rules`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,11 +18,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Define rule: 
 
-## Development
+```ruby
+  SimpleRules.can :some_action, SomeObject, error_message: 'Message' do |object, subject|
+    subject.some_attr ==  object.some_attr
+  end
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Checking action: 
+```ruby
+  SimpleRules.can? :some_action, some_object, subject
+```
+
+Configuration:
+```ruby
+  SimpleRules.configure do |config|
+    config.raise_not_authorized = true
+  end
+``` 
+If raise_not_authorized is true then SimpleRules.can will raise SimpleRules:NotAuthorized exception with error_message.
+
 
 ## Contributing
 

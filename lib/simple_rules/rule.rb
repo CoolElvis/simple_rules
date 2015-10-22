@@ -12,7 +12,10 @@ module SimpleRules
     end
   end
 
-  class RuleNotFindError < StandardError
-  end
+  class SimpleRulesError < StandardError; end
+
+  class RuleNotFindError < SimpleRulesError; end
+
+  class NotAuthorized < SimpleRulesError; end
 
 end

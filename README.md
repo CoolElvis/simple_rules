@@ -21,23 +21,23 @@ Or install it yourself as:
 Define rule: 
 
 ```ruby
-  SimpleRules.can :some_action, SomeObject, error_message: 'Message' do |object, subject|
-    subject.some_attr ==  object.some_attr
-  end
+SimpleRules.can :some_action, SomeObject, error_message: 'Message' do |object, subject|
+  subject.some_attr ==  object.some_attr
+end
 ```
 
 Checking action: 
 ```ruby
-  SimpleRules.can? :some_action, some_object, subject
+SimpleRules.can? :some_action, some_object, subject
 ```
 
 Configuration:
 ```ruby
-  SimpleRules.configure do |config|
-    config.raise_not_authorized = true
-  end
+SimpleRules.configure do |config|
+  config.raise_not_authorized = true
+end
 ``` 
-If raise_not_authorized is true then SimpleRules.can will raise SimpleRules:NotAuthorized exception with error_message.
+If raise_not_authorized is true then SimpleRules.can will raise SimpleRules:NotAuthorized exception with an error_message.
 
 
 ## Contributing

@@ -6,7 +6,7 @@ module SimpleRules
         :raise_not_authorized
     ]
 
-    attr_accessor *OPTION_NAMES
+    attr_accessor(*OPTION_NAMES)
 
     # A global configuration set via the block.
     # @example

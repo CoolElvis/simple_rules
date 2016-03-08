@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/CoolElvis/simple_rules.svg?branch=master)](https://travis-ci.org/CoolElvis/simple_rules)
+[![Code Climate](https://codeclimate.com/github/CoolElvis/simple_rules/badges/gpa.svg)](https://codeclimate.com/github/CoolElvis/simple_rules)
+[![Test Coverage](https://codeclimate.com/github/CoolElvis/simple_rules/badges/coverage.svg)](https://codeclimate.com/github/CoolElvis/simple_rules/coverage)
+[![Issue Count](https://codeclimate.com/github/CoolElvis/simple_rules/badges/issue_count.svg)](https://codeclimate.com/github/CoolElvis/simple_rules)
+
 # SimpleRules
 
 ## Installation

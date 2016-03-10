@@ -14,8 +14,5 @@ group :development do
   gem 'pry-byebug'
   gem 'rubocop'
   gem 'reek'
-end
-
-group :development do
   gem 'rubocop', require: false
 end
